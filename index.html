@@ -1,42 +1,57 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="tj">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Техническое обслуживание | Kurush Digital</title>
+    <title>Kurush Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Эффект вращения логотипа */
+        @keyframes rotate {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+        .animate-spin-slow {
+            animation: rotate 8s linear infinite;
+            transform-style: preserve-3d;
+        }
+        /* Эффект стекла */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+    </style>
 </head>
-<body class="bg-[#0f172a] flex flex-col min-h-screen text-white font-sans">
+<body class="bg-[#050b16] min-h-screen flex flex-col items-center justify-center p-6 text-white font-sans">
 
-    <!-- Основной контент -->
-    <main class="flex-grow flex items-center justify-center p-6">
-        <div class="max-w-md w-full text-center">
-            <!-- Логотип -->
-            <div class="mb-8">
-                <img src="https://i.ibb.co/1G0yvy1B/file-00000000a2507243b7e45f572fc19aaf.png" 
-                     alt="Kurush Digital Logo" 
-                     class="mx-auto w-32 h-32 drop-shadow-[0_0_20px_rgba(16,185,129,0.2)]">
-            </div>
-
-            <!-- Заголовок и описание -->
-            <h1 class="text-3xl font-bold mb-4 tracking-tight">Система на обновлении</h1>
-            <p class="text-slate-400 mb-8 leading-relaxed">
-                Мы проводим оптимизацию серверных мощностей для повышения стабильности работы. 
-                У вас есть вопросы по текущему проекту или идеи для новых цифровых решений? 
-                Давайте обсудим ваше видение напрямую с нашей командой.
-            </p>
-
-            <!-- Кнопка действия -->
-            <a href="https://t.me/kurush_digital" 
-               class="block w-full bg-[#10b981] hover:bg-[#059669] text-white font-bold py-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg shadow-emerald-900/20">
-                Связаться с поддержкой
-            </a>
+    <!-- Карточка с эффектом стекла -->
+    <div class="glass max-w-sm w-full p-8 rounded-[2rem] text-center transform transition-all">
+        
+        <!-- Анимированный логотип (3D вращение) -->
+        <div class="mb-8 perspective-1000">
+            <img src="https://i.ibb.co/1G0yvy1B/file-00000000a2507243b7e45f572fc19aaf.png" 
+                 alt="Kurush Digital" 
+                 class="mx-auto w-32 h-32 animate-spin-slow object-contain">
         </div>
-    </main>
+
+        <!-- Текст -->
+        <h1 class="text-2xl font-bold mb-4">Барномаи «Радио Исфара» дастрас нест</h1>
+        <p class="text-gray-300 mb-8 leading-relaxed">
+            Мо дар болои барномаи наву замонавӣ кор карда истодаем. Ба зудӣ онро ба шумо пешкаш мекунем.
+        </p>
+
+        <!-- Кнопка -->
+        <a href="https://t.me/kurush_digital" 
+           class="block w-full bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-md text-white font-bold py-4 rounded-2xl transition-all shadow-xl hover:scale-[1.02]">
+            Навиштан ба дастгирӣ
+        </a>
+    </div>
 
     <!-- Футер -->
-    <footer class="p-6 text-center border-t border-slate-800">
-        <a href="https://kurushdigital.one" class="text-slate-500 hover:text-emerald-500 transition-colors text-sm font-medium">
+    <footer class="mt-12">
+        <a href="https://kurushdigital.one" class="text-gray-600 hover:text-emerald-500 transition-colors text-sm font-medium">
             kurushdigital.one
         </a>
     </footer>
